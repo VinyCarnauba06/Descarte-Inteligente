@@ -1,4 +1,4 @@
-const CACHE_NAME = 'descarte-inteligente-cache-v7';
+const CACHE_NAME = 'descarte-inteligente-cache-v8';
 const SHELL_ASSETS = [
   '/',
   '/index.html',

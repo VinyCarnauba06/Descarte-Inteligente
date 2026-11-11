@@ -412,7 +412,7 @@ function renderizarListaCardsPevsHtml(
               >
                 <div class="pev-card-top">
                   <div class="pev-badges-row">
-                    ${pev.destaque_piloto ? `<span class="badge-piloto">Ponto Piloto</span>` : ''}
+                    ${pev.destaque_piloto ? `<span class="badge-piloto">Ponto Piloto UNIMA</span>` : ''}
                     ${isNearest ? `<span class="badge-nearest">Mais próximo</span>` : ''}
                   </div>
                   <span class="badge-distance">${formatarDistancia(pev.distanciaKm)}</span>

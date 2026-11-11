@@ -9,7 +9,7 @@ import type {
 export const COORDENADAS_PADRAO_PILOTO = {
   latitude: -9.6198,
   longitude: -35.7014,
-  label: 'Ponto Piloto Cruz das Almas (Maceió-AL)',
+  label: 'Campus UNIMA — Cruz das Almas (Maceió-AL)',
 };
 export const COORDENADAS_PADRAO_UNIMA = COORDENADAS_PADRAO_PILOTO;
 
@@ -79,8 +79,8 @@ export const CATEGORIAS_META: Record<CategoriaResiduo, CategoriaMeta> = {
 export const PEVS_INICIAIS_MACEIO: PevItem[] = [
   {
     id: 1,
-    nome: 'Coletor Piloto — Ponto Cruz das Almas (Entrada Principal)',
-    endereco: 'Av. Comendador Gustavo Paiva, 5017 — Cruz das Almas, Maceió - AL',
+    nome: 'Coletor Piloto — Campus UNIMA (Cruz das Almas)',
+    endereco: 'Av. Comendador Gustavo Paiva, 5017 (Campus UNIMA) — Cruz das Almas, Maceió - AL',
     bairro: 'Cruz das Almas',
     latitude: -9.6198,
     longitude: -35.7014,
@@ -88,9 +88,9 @@ export const PEVS_INICIAIS_MACEIO: PevItem[] = [
     categorias: ['pilhas', 'celulares', 'cabos'],
     ativo: true,
     destaque_piloto: true,
-    operador: 'Projeto Descarte Inteligente',
+    operador: 'Campus UNIMA | Afya',
     observacao:
-      'Coletor cilíndrico ⌀ 40×60 cm com slot superior (20×4 cm) para celulares/cabos e caixa metálica lateral isolada (15×12 cm) exclusiva para pilhas e baterias.',
+      'Coletor físico instalado na entrada do refeitório do Campus UNIMA. Fenda superior (20×4 cm) para celulares/cabos e caixa metálica lateral isolada (15×12 cm) para pilhas e baterias.',
     criado_em: '2026-08-22T10:00:00.000Z',
     atualizado_em: '2026-09-30T14:00:00.000Z',
   },
