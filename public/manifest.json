@@ -1,0 +1,63 @@
+{
+  "id": "/",
+  "name": "Descarte Inteligente — Mapa de PEVs Maceió-AL",
+  "short_name": "Descarte Inteligente",
+  "description": "Ecossistema Fígital de Logística Reversa de Resíduos Eletrônicos em Maceió-AL",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F4F2EA",
+  "theme_color": "#235338",
+  "lang": "pt-BR",
+  "categories": ["education", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mapa de PEVs Maceió",
+      "short_name": "Mapa PEVs",
+      "description": "Localizar o ponto de coleta mais próximo por GPS",
+      "url": "/?tab=mapa",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Guia do Coletor & LGPD",
+      "short_name": "Coletor & LGPD",
+      "description": "Ficha técnica 1:10 e checklist de limpeza de dados",
+      "url": "/?tab=coletor",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Projeto 5W2H & Cartaz QR",
+      "short_name": "5W2H & QR",
+      "description": "Matriz 5W2H, ODS e gerador de QR Code",
+      "url": "/?tab=institucional",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "nome": "Coletor Piloto — Campus UNIMA | Afya (Entrada do Refeitório)",
+    "endereco": "Av. Comendador Gustavo Paiva, 5017 — Cruz das Almas, Maceió - AL",
+    "bairro": "Cruz das Almas",
+    "latitude": -9.6198,
+    "longitude": -35.7014,
+    "horario_funcionamento": "Seg a Sex: 07h00 às 22h00 | Sáb: 08h00 às 12h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos"
+    ],
+    "ativo": true,
+    "destaque_piloto": true,
+    "operador": "Projeto Descarte Inteligente (Experiência Extensionista II)",
+    "observacao": "Coletor cilíndrico ⌀ 40×60 cm com slot superior (20×4 cm) para celulares/cabos e caixa metálica lateral isolada (15×12 cm) exclusiva para pilhas e baterias.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-30T14:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "nome": "Centro de Inovação do Polo Tecnológico (CIPT Jaraguá)",
+    "endereco": "Av. Comendador Leão, 322 — Jaraguá, Maceió - AL",
+    "bairro": "Jaraguá",
+    "latitude": -9.6731,
+    "longitude": -35.7224,
+    "horario_funcionamento": "Seg a Sex: 08h00 às 18h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "SECTI-AL / Hub Tecnológico de Alagoas",
+    "observacao": "Recebe resíduos de informática, placas, periféricos, smartphones e baterias no hall térreo.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "nome": "PEV Green Eletron — Parque Shopping Maceió",
+    "endereco": "Av. Comendador Gustavo Paiva, 5945 — Cruz das Almas, Maceió - AL",
+    "bairro": "Cruz das Almas",
+    "latitude": -9.6263,
+    "longitude": -35.6997,
+    "horario_funcionamento": "Seg a Sáb: 10h00 às 22h00 | Dom: 12h00 às 21h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Green Eletron / ABREE",
+    "observacao": "A apenas 850m da UNIMA. Ideal quando seu equipamento (notebook, impressora pequena, teclado) não passar na fenda de 20×4 cm do coletor piloto.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "nome": "Ponto de Logística Reversa — Leroy Merlin Maceió",
+    "endereco": "Av. Comendador Gustavo Paiva, 5300 — Cruz das Almas, Maceió - AL",
+    "bairro": "Cruz das Almas",
+    "latitude": -9.6285,
+    "longitude": -35.7021,
+    "horario_funcionamento": "Seg a Sáb: 08h00 às 22h00 | Dom: 09h00 às 20h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "eletrodomesticos"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Leroy Merlin / Recicla Eletro",
+    "observacao": "Aceita ferramentas elétricas descartadas, eletroportáteis, lâmpadas íntegras, pilhas e cabos na entrada principal.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "nome": "PEV Green Eletron — Maceió Shopping",
+    "endereco": "Av. Comendador Gustavo Paiva, 2990 — Mangabeiras, Maceió - AL",
+    "bairro": "Mangabeiras",
+    "latitude": -9.6481,
+    "longitude": -35.7136,
+    "horario_funcionamento": "Seg a Sáb: 09h00 às 22h00 | Dom: 12h00 às 21h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Green Eletron / Operadoras de Telefonia",
+    "observacao": "Urna coletora para celulares, baterias, carregadores, modems e pequenos aparelhos eletrônicos.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "nome": "Estação Coleta — Carrefour Mangabeiras",
+    "endereco": "Av. Comendador Gustavo Paiva, 2642 — Mangabeiras, Maceió - AL",
+    "bairro": "Mangabeiras",
+    "latitude": -9.6442,
+    "longitude": -35.7175,
+    "horario_funcionamento": "Seg a Sáb: 07h00 às 22h00 | Dom: 07h00 às 20h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "eletrodomesticos"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Grupo Carrefour / Green Eletron",
+    "observacao": "Coletor próximo ao atendimento ao cliente para pilhas, baterias portáteis e pequenos eletrodomésticos.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "nome": "SENAI Alagoas — Hub Logística Reversa Poço",
+    "endereco": "Rua Pedro Américo, 18 — Poço, Maceió - AL",
+    "bairro": "Poço",
+    "latitude": -9.6624,
+    "longitude": -35.7318,
+    "horario_funcionamento": "Seg a Sex: 08h00 às 17h30",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores",
+      "eletrodomesticos"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Sistema FIEA / SENAI-AL",
+    "observacao": "Recebe computadores completos, monitores, placas eletrônicas e equipamentos de laboratório/escritório para triagem técnica.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "nome": "Home Center Ferreira Costa — Coleta Eletrônica",
+    "endereco": "Av. Durval de Góes Monteiro, 6101 — Tabuleiro do Martins, Maceió - AL",
+    "bairro": "Tabuleiro do Martins",
+    "latitude": -9.6079,
+    "longitude": -35.7469,
+    "horario_funcionamento": "Seg a Sáb: 08h00 às 21h00 | Dom: 09h00 às 18h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores",
+      "eletrodomesticos"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Ferreira Costa / ABREE",
+    "observacao": "Ecoponto amplo no piso de estacionamento para a parte alta de Maceió. Recebe de pilhas a ventiladores e micro-ondas.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "nome": "PEV Green Eletron — Shopping Pátio Maceió",
+    "endereco": "Av. Menino Marcelo, 3800 — Cidade Universitária, Maceió - AL",
+    "bairro": "Cidade Universitária",
+    "latitude": -9.5582,
+    "longitude": -35.7478,
+    "horario_funcionamento": "Seg a Sáb: 09h00 às 22h00 | Dom: 12h00 às 21h00",
+    "categorias": [
+      "pilhas",
+      "celulares",
+      "cabos",
+      "computadores"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "Green Eletron",
+    "observacao": "Atende toda a região da Cidade Universitária e Benedito Bentes para descarte de portáteis, cabos, pilhas e acessórios.",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "nome": "Ecoponto Municipal ALURB — Pajuçara",
+    "endereco": "Rua Campos Teixeira, s/n — Pajuçara, Maceió - AL",
+    "bairro": "Pajuçara",
+    "latitude": -9.6692,
+    "longitude": -35.7145,
+    "horario_funcionamento": "Todos os dias: 06h00 às 18h00",
+    "categorias": [
+      "computadores",
+      "eletrodomesticos"
+    ],
+    "ativo": true,
+    "destaque_piloto": false,
+    "operador": "ALURB / Prefeitura de Maceió + Cooperativas Parceiras",
+    "observacao": "Indicado exclusivamente para equipamentos volumosos (TVs antigas, monitores, carcaças de PC e eletrodomésticos de grande porte).",
+    "criado_em": "2026-08-22T10:00:00.000Z",
+    "atualizado_em": "2026-09-15T12:00:00.000Z"
+  }
+]

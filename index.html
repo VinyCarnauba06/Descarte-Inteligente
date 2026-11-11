@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta
+      name="description"
+      content="Descarte Inteligente — Mapa interativo de Pontos de Entrega Voluntária (PEVs) de resíduos eletrônicos em Maceió-AL, guia técnico do coletor e conformidade LGPD."
+    />
+    <meta name="theme-color" content="#235338" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Descarte Inteligente" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "/vendor/leaflet-src.esm.js"
+        }
+      }
+    </script>
+    <title>Descarte Inteligente · PEVs de E-Lixo em Maceió-AL</title>
+  </head>
+  <body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
