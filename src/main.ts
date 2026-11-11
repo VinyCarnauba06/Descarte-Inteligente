@@ -412,7 +412,6 @@ function renderizarListaCardsPevsHtml(
               >
                 <div class="pev-card-top">
                   <div class="pev-badges-row">
-                    ${pev.destaque_piloto ? `<span class="badge-piloto">Ponto Piloto UNIMA</span>` : ''}
                     ${isNearest ? `<span class="badge-nearest">Mais próximo</span>` : ''}
                   </div>
                   <span class="badge-distance">${formatarDistancia(pev.distanciaKm)}</span>
@@ -540,7 +539,7 @@ function renderizarAbaMapa(): string {
     <section class="qr-banner" aria-label="Orientação rápida de triagem do coletor">
       <div>
         <h2 class="qr-banner-title">
-          <span>Na frente do Coletor Piloto?</span>
+          <span>Na frente do Coletor?</span>
           <span class="spec-pill">Slot 20×4 cm | Pilhas 15×12 cm</span>
         </h2>
         <p class="qr-banner-desc">
@@ -704,7 +703,7 @@ function renderizarAbaColetorELgpd(): string {
         <div>
           <span class="spec-pill">Cilindro ⌀ 40 cm × 60 cm</span>
           <div class="sheet-meta-mono" style="margin-top: 4px;">
-            Local Piloto: Entrada Principal (Cruz das Almas, Maceió)
+            Local: Entrada do Refeitório (Campus UNIMA)
           </div>
         </div>
       </div>
@@ -781,7 +780,7 @@ function renderizarAbaColetorELgpd(): string {
         <div style="background: var(--color-bg-canvas); border: 1.5px solid var(--color-border-strong); padding: 14px; border-radius: var(--radius-sm);">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
             <span class="spec-pill" style="background: ${itemCalc.cabeNoColetorPiloto ? '#ECF4EF' : '#FDF1EB'}; color: ${itemCalc.cabeNoColetorPiloto ? '#1D633B' : '#B84A18'}; border-color: currentColor;">
-              ${itemCalc.cabeNoColetorPiloto ? '✓ CABE NO COLETOR PILOTO (20×4 cm)' : '✕ EXCEDE O COLETOR PILOTO — EXIGE ECOPONTO MAIOR'}
+              ${itemCalc.cabeNoColetorPiloto ? '✓ CABE NO COLETOR (20×4 cm)' : '✕ EXCEDE O COLETOR — EXIGE ECOPONTO MAIOR'}
             </span>
             <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;">
               Retém ~${itemCalc.metaisEvitadosGramas}g de compostos tóxicos
@@ -951,7 +950,7 @@ function renderizarAbaInstitucional(): string {
         <div class="matrix-card">
           <span class="matrix-tag">WHERE · Onde será feito?</span>
           <p style="margin: 6px 0 0 0; font-size: 0.88rem;">
-            <strong>Físico:</strong> Estudo de cenários entre (A) Escola-Parceira, (B) Centro de Inovação do Polo Tecnológico (CIPT Jaraguá) e (C) Ponto Piloto Cruz das Almas.<br/>
+            <strong>Físico:</strong> Estudo de cenários entre (A) Escola-Parceira, (B) Centro de Inovação do Polo Tecnológico (CIPT Jaraguá) e (C) Campus UNIMA (Cruz das Almas).<br/>
             <strong>Digital:</strong> Aplicativo web acessível por QR Code em nuvem gratuita.
           </p>
         </div>
@@ -1053,7 +1052,7 @@ function renderizarAbaInstitucional(): string {
         <div>
           <span class="brand-eyebrow">Gerador ISO/IEC 18004 Real · Alta Resolução</span>
           <h2 id="titulo-cartaz" style="margin: 4px 0 0 0; font-family: var(--font-display);">
-            Gerador de QR Code & Cartaz A4 para o Coletor Piloto
+            Gerador de QR Code & Cartaz A4 para o Coletor
           </h2>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
@@ -1467,7 +1466,7 @@ function vincularEventosDom(): void {
       estado.pevSelecionadoId = 3; // Parque Shopping (a 850m do ponto piloto)
       atualizarParcialAbaMapa(true);
       mostrarNotificacao(
-        'Filtro ajustado para Computadores/Médio Porte. Destacando PEV Parque Shopping (850m do ponto piloto).'
+        'Filtro ajustado para Computadores/Médio Porte. Destacando PEV Parque Shopping (850m da UNIMA).'
       );
     });
   }
@@ -1494,7 +1493,7 @@ function vincularEventosDom(): void {
     btnGps.addEventListener('click', () => {
       if (!('geolocation' in navigator)) {
         mostrarNotificacao(
-          'Seu navegador não suporta geolocalização. Mantendo referência no Ponto Piloto.'
+          'Seu navegador não suporta geolocalização. Mantendo referência no Campus UNIMA.'
         );
         return;
       }
