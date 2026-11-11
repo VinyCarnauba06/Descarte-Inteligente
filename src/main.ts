@@ -143,7 +143,7 @@ const estado: EstadoApp = {
     !window.location.hostname.includes('localhost') &&
     !window.location.hostname.includes('127.0.0.1')
       ? window.location.origin
-      : 'https://descarte-inteligente.vercel.app',
+      : 'https://descarte-inteligente-chi.vercel.app',
 };
 
 let instanciaMapa: L.Map | null = null;
@@ -213,8 +213,7 @@ function renderizarCabecalho(): string {
     <header class="site-header">
       <div class="header-topbar">
         <div>
-          <span class="header-topbar-badge">MACEIÓ-AL · LOGÍSTICA REVERSA</span>
-          <span class="header-topbar-extra"> · Coleta Seletiva e Mapeamento de PEVs</span>
+          <span class="header-topbar-badge">MACEIÓ - AL</span>
         </div>
         <div>
           <span>PEVs: <strong>${totalAtivos}</strong></span>
@@ -240,7 +239,7 @@ function renderizarCabecalho(): string {
             </svg>
           </div>
           <div class="brand-titles">
-            <span class="brand-eyebrow">Logística Reversa de E-Lixo</span>
+            <span class="brand-eyebrow">Pontos de Coleta · E-Lixo</span>
             <h1 class="brand-name">DESCARTE INTELIGENTE</h1>
           </div>
         </div>
@@ -901,7 +900,10 @@ function renderizarAbaColetorELgpd(): string {
 
 function renderizarAbaInstitucional(): string {
   const urlQr =
-    estado.urlQrCodeCustom.trim() || 'https://descarte-inteligente-unima.vercel.app';
+    estado.urlQrCodeCustom.trim() ||
+    (typeof window !== 'undefined'
+      ? window.location.origin
+      : 'https://descarte-inteligente-chi.vercel.app');
 
   return `
     <!-- Indicadores da Árvore do Problema -->
@@ -1010,7 +1012,7 @@ function renderizarAbaInstitucional(): string {
           <div class="matrix-card">
             <strong style="color: var(--color-text-primary);">ODS 12 — Consumo e Produção Responsáveis</strong>
             <p style="margin: 4px 0 0 0; font-size: 0.84rem;">
-              Viabilização da logística reversa e fomento à <em>Mineração Urbana</em> (recuperação de ouro, prata, cobre e terras raras presentes em placas eletrônicas).
+              Destinação ambientalmente adequada e fomento à <em>Mineração Urbana</em> (recuperação de metais como ouro, prata, cobre e terras raras).
             </p>
           </div>
         </div>
@@ -1074,9 +1076,9 @@ function renderizarAbaInstitucional(): string {
               class="form-input"
               style="flex: 1 1 280px;"
               value="${escaparHtml(urlQr)}"
-              placeholder="https://descarte-inteligente-unima.vercel.app"
+              placeholder="https://descarte-inteligente-chi.vercel.app"
             />
-            <button type="button" class="btn btn-secondary btn-sm" data-qr-preset="${escaparHtml(typeof window !== 'undefined' ? window.location.origin : 'https://descarte-inteligente-unima.vercel.app')}">
+            <button type="button" class="btn btn-secondary btn-sm" data-qr-preset="${escaparHtml(typeof window !== 'undefined' ? window.location.origin : 'https://descarte-inteligente-chi.vercel.app')}">
               <span>Usar URL Atual do App</span>
             </button>
           </div>
@@ -1637,7 +1639,9 @@ function vincularEventosDom(): void {
       if (box) {
         box.innerHTML = gerarSvgQrCodeDidatico(
           estado.urlQrCodeCustom.trim() ||
-            'https://descarte-inteligente-unima.vercel.app',
+            (typeof window !== 'undefined'
+              ? window.location.origin
+              : 'https://descarte-inteligente-chi.vercel.app'),
           220
         );
       }
@@ -1661,7 +1665,9 @@ function vincularEventosDom(): void {
     btnBaixarSvg.addEventListener('click', () => {
       const urlAlvo =
         estado.urlQrCodeCustom.trim() ||
-        'https://descarte-inteligente-unima.vercel.app';
+        (typeof window !== 'undefined'
+          ? window.location.origin
+          : 'https://descarte-inteligente-chi.vercel.app');
       const svgString = gerarSvgQrCodeDidatico(urlAlvo, 1024);
       const blob = new Blob([svgString], {
         type: 'image/svg+xml;charset=utf-8',
@@ -1780,12 +1786,12 @@ function renderizarApp(): void {
     <footer class="site-footer">
       <div class="footer-inner">
         <div>
-          <strong>PROJETO DESCARTE INTELIGENTE</strong> · Logística Reversa de E-Lixo (Maceió - AL)<br/>
-          Iniciativa de Extensão Acadêmica · Mapeamento Colaborativo de PEVs
+          <strong>DESCARTE INTELIGENTE</strong> · Maceió - AL<br/>
+          Mapeamento de PEVs e Descarte de Resíduos Eletrônicos
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.76rem;">
-          Base Legal: PNRS (Lei 12.305/2010) · Decreto Federal 10.240/2020 · LGPD (Lei 13.709/2018)<br/>
-          PWA Mobile-First · Leaflet + OpenStreetMap · Fonte dos Dados: ${estado.origemDados.toUpperCase()}
+          Base Legal: PNRS (Lei 12.305/2010) · LGPD (Lei 13.709/2018)<br/>
+          PWA Mobile-First · OpenStreetMap
         </div>
       </div>
     </footer>
