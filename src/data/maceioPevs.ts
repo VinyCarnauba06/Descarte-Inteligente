@@ -6,11 +6,12 @@ import type {
   PevItem,
 } from '../types';
 
-export const COORDENADAS_PADRAO_UNIMA = {
+export const COORDENADAS_PADRAO_PILOTO = {
   latitude: -9.6198,
   longitude: -35.7014,
-  label: 'Campus UNIMA | Afya (Cruz das Almas)',
+  label: 'Ponto Piloto Cruz das Almas (Maceió-AL)',
 };
+export const COORDENADAS_PADRAO_UNIMA = COORDENADAS_PADRAO_PILOTO;
 
 export const CATEGORIAS_META: Record<CategoriaResiduo, CategoriaMeta> = {
   pilhas: {
@@ -78,7 +79,7 @@ export const CATEGORIAS_META: Record<CategoriaResiduo, CategoriaMeta> = {
 export const PEVS_INICIAIS_MACEIO: PevItem[] = [
   {
     id: 1,
-    nome: 'Coletor Piloto — Campus UNIMA | Afya (Entrada do Refeitório)',
+    nome: 'Coletor Piloto — Ponto Cruz das Almas (Entrada Principal)',
     endereco: 'Av. Comendador Gustavo Paiva, 5017 — Cruz das Almas, Maceió - AL',
     bairro: 'Cruz das Almas',
     latitude: -9.6198,
@@ -87,7 +88,7 @@ export const PEVS_INICIAIS_MACEIO: PevItem[] = [
     categorias: ['pilhas', 'celulares', 'cabos'],
     ativo: true,
     destaque_piloto: true,
-    operador: 'Projeto Descarte Inteligente (Experiência Extensionista II)',
+    operador: 'Projeto Descarte Inteligente',
     observacao:
       'Coletor cilíndrico ⌀ 40×60 cm com slot superior (20×4 cm) para celulares/cabos e caixa metálica lateral isolada (15×12 cm) exclusiva para pilhas e baterias.',
     criado_em: '2026-08-22T10:00:00.000Z',
@@ -123,7 +124,7 @@ export const PEVS_INICIAIS_MACEIO: PevItem[] = [
     destaque_piloto: false,
     operador: 'Green Eletron / ABREE',
     observacao:
-      'A apenas 850m da UNIMA. Ideal quando seu equipamento (notebook, impressora pequena, teclado) não passar na fenda de 20×4 cm do coletor piloto.',
+      'A apenas 850m do Ponto Piloto. Ideal quando seu equipamento (notebook, impressora pequena, teclado) não passar na fenda de 20×4 cm do coletor piloto.',
     criado_em: '2026-08-22T10:00:00.000Z',
     atualizado_em: '2026-09-15T12:00:00.000Z',
   },
@@ -309,7 +310,7 @@ export const ITENS_CALCULADORA: ItemCalculadoraToxica[] = [
     cabeNoColetorPiloto: true,
     elementosPrincipais: ['Lítio (Li)', 'Cobalto (Co)', 'Chumbo (Pb)', 'Arsênio (As)', 'Ouro (0,03g recuperável)'],
     alertaManuseio:
-      'Cabe na fenda de 20×4 cm do Coletor UNIMA. Antes de depositar, realize o Hard Reset (LGPD) e remova chip SIM/SD. Se a bateria estiver estufada, entregue na portaria/caixa metálica.',
+      'Cabe na fenda de 20×4 cm do Coletor Piloto. Antes de depositar, realize o Hard Reset (LGPD) e remova chip SIM/SD. Se a bateria estiver estufada, entregue na portaria/caixa metálica.',
   },
   {
     id: 'pilhas-pack',
@@ -331,7 +332,7 @@ export const ITENS_CALCULADORA: ItemCalculadoraToxica[] = [
     cabeNoColetorPiloto: true,
     elementosPrincipais: ['Cobre eletrolítico (Cu)', 'Ftalatos (PVC)', 'Retardantes de chama bromados', 'Estanho (Sn)'],
     alertaManuseio:
-      'Cabe perfeitamente no slot superior de 20×4 cm do Coletor UNIMA. Enrole o cabo para evitar que trave a boca coletora.',
+      'Cabe perfeitamente no slot superior de 20×4 cm do Coletor Piloto. Enrole o cabo para evitar que trave a boca coletora.',
   },
   {
     id: 'notebook',
@@ -342,7 +343,7 @@ export const ITENS_CALCULADORA: ItemCalculadoraToxica[] = [
     cabeNoColetorPiloto: false,
     elementosPrincipais: ['Chumbo (Pb)', 'Berílio (Be)', 'Cromo Hexavalente (Cr VI)', 'Lítio (Li)', 'Prata & Ouro'],
     alertaManuseio:
-      'NÃO CABE no slot 20×4 cm do Coletor Piloto. Recomendamos o PEV Parque Shopping (a 850m da UNIMA), CIPT Jaraguá ou SENAI Poço.',
+      'NÃO CABE no slot 20×4 cm do Coletor Piloto. Recomendamos o PEV Parque Shopping (a 850m do ponto piloto), CIPT Jaraguá ou SENAI Poço.',
   },
   {
     id: 'microondas-tv',
@@ -389,10 +390,7 @@ export const CHECKLIST_LGPD = [
 ];
 
 export const EQUIPE_PROJETO = {
-  instituicao: 'Centro Universitário UNIMA | Afya — Maceió, AL',
-  disciplina: 'Experiência Extensionista II (UP1 - 2026)',
-  orientadora: 'Profa. Mayranne Rocha',
-  tema: 'Prevenção de Vulnerabilidades Sociais e Ambientais',
+  tema: 'Prevenção de Vulnerabilidades Sociais e Ambientais — Logística Reversa',
   lideranca: 'Fabiano Felipe de França (Ciência da Computação)',
   cursos: [
     {

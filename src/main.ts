@@ -2,7 +2,7 @@ import * as L from 'leaflet';
 import {
   CATEGORIAS_META,
   CHECKLIST_LGPD,
-  COORDENADAS_PADRAO_UNIMA,
+  COORDENADAS_PADRAO_PILOTO,
   ELEMENTOS_TOXICOS,
   EQUIPE_PROJETO,
   ITENS_CALCULADORA,
@@ -125,11 +125,11 @@ const estado: EstadoApp = {
   categoriaFiltro: sessaoSalva.categoriaFiltro ?? 'todas',
   termoBusca: '',
   coordenadasUsuario: {
-    latitude: COORDENADAS_PADRAO_UNIMA.latitude,
-    longitude: COORDENADAS_PADRAO_UNIMA.longitude,
-    rotulo: COORDENADAS_PADRAO_UNIMA.label,
+    latitude: COORDENADAS_PADRAO_PILOTO.latitude,
+    longitude: COORDENADAS_PADRAO_PILOTO.longitude,
+    rotulo: COORDENADAS_PADRAO_PILOTO.label,
   },
-  statusGps: 'Ref.: Campus UNIMA | Afya',
+  statusGps: 'Ref.: Ponto Piloto (Cruz das Almas)',
   pevSelecionadoId: sessaoSalva.pevSelecionadoId ?? 1,
   calloutColetorAtivo: 1,
   itemCalculadoraId: ITENS_CALCULADORA[0].id,
@@ -143,7 +143,7 @@ const estado: EstadoApp = {
     !window.location.hostname.includes('localhost') &&
     !window.location.hostname.includes('127.0.0.1')
       ? window.location.origin
-      : 'https://descarte-inteligente-unima.vercel.app',
+      : 'https://descarte-inteligente.vercel.app',
 };
 
 let instanciaMapa: L.Map | null = null;
@@ -213,8 +213,8 @@ function renderizarCabecalho(): string {
     <header class="site-header">
       <div class="header-topbar">
         <div>
-          <span class="header-topbar-badge">UNIMA | AFYA · MACEIÓ-AL</span>
-          <span class="header-topbar-extra"> · Experiência Extensionista II · Profa. Mayranne Rocha</span>
+          <span class="header-topbar-badge">MACEIÓ-AL · LOGÍSTICA REVERSA</span>
+          <span class="header-topbar-extra"> · Coleta Seletiva e Mapeamento de PEVs</span>
         </div>
         <div>
           <span>PEVs: <strong>${totalAtivos}</strong></span>
@@ -413,7 +413,7 @@ function renderizarListaCardsPevsHtml(
               >
                 <div class="pev-card-top">
                   <div class="pev-badges-row">
-                    ${pev.destaque_piloto ? `<span class="badge-piloto">Ponto Piloto UNIMA</span>` : ''}
+                    ${pev.destaque_piloto ? `<span class="badge-piloto">Ponto Piloto</span>` : ''}
                     ${isNearest ? `<span class="badge-nearest">Mais próximo</span>` : ''}
                   </div>
                   <span class="badge-distance">${formatarDistancia(pev.distanciaKm)}</span>
@@ -541,7 +541,7 @@ function renderizarAbaMapa(): string {
     <section class="qr-banner" aria-label="Orientação rápida de triagem do coletor">
       <div>
         <h2 class="qr-banner-title">
-          <span>Na frente do Coletor UNIMA?</span>
+          <span>Na frente do Coletor Piloto?</span>
           <span class="spec-pill">Slot 20×4 cm | Pilhas 15×12 cm</span>
         </h2>
         <p class="qr-banner-desc">
@@ -582,7 +582,7 @@ function renderizarAbaMapa(): string {
             <span>Meu GPS</span>
           </button>
           <button type="button" class="btn btn-secondary btn-sm" id="btn-simular-unima">
-            <span>Ref.: UNIMA</span>
+            <span>Ref.: Ponto Piloto</span>
           </button>
         </div>
       </div>
@@ -708,7 +708,7 @@ function renderizarAbaColetorELgpd(): string {
         <div>
           <span class="spec-pill">Cilindro ⌀ 40 cm × 60 cm</span>
           <div class="sheet-meta-mono" style="margin-top: 4px;">
-            Local Piloto: Entrada do Refeitório (UNIMA | Afya)
+            Local Piloto: Entrada Principal (Cruz das Almas, Maceió)
           </div>
         </div>
       </div>
@@ -785,7 +785,7 @@ function renderizarAbaColetorELgpd(): string {
         <div style="background: var(--color-bg-canvas); border: 1.5px solid var(--color-border-strong); padding: 14px; border-radius: var(--radius-sm);">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
             <span class="spec-pill" style="background: ${itemCalc.cabeNoColetorPiloto ? '#ECF4EF' : '#FDF1EB'}; color: ${itemCalc.cabeNoColetorPiloto ? '#1D633B' : '#B84A18'}; border-color: currentColor;">
-              ${itemCalc.cabeNoColetorPiloto ? '✓ CABE NO COLETOR PILOTO UNIMA (20×4 cm)' : '✕ EXCEDE O COLETOR PILOTO — EXIGE ECOPONTO MAIOR'}
+              ${itemCalc.cabeNoColetorPiloto ? '✓ CABE NO COLETOR PILOTO (20×4 cm)' : '✕ EXCEDE O COLETOR PILOTO — EXIGE ECOPONTO MAIOR'}
             </span>
             <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;">
               Retém ~${itemCalc.metaisEvitadosGramas}g de compostos tóxicos
@@ -952,7 +952,7 @@ function renderizarAbaInstitucional(): string {
         <div class="matrix-card">
           <span class="matrix-tag">WHERE · Onde será feito?</span>
           <p style="margin: 6px 0 0 0; font-size: 0.88rem;">
-            <strong>Físico:</strong> Estudo de cenários entre (A) Escola-Parceira, (B) Centro de Inovação do Polo Tecnológico (CIPT Jaraguá) e (C) Entrada do Refeitório do Campus UNIMA | Afya.<br/>
+            <strong>Físico:</strong> Estudo de cenários entre (A) Escola-Parceira, (B) Centro de Inovação do Polo Tecnológico (CIPT Jaraguá) e (C) Ponto Piloto Cruz das Almas.<br/>
             <strong>Digital:</strong> Aplicativo web acessível por QR Code em nuvem gratuita.
           </p>
         </div>
@@ -960,14 +960,14 @@ function renderizarAbaInstitucional(): string {
         <div class="matrix-card">
           <span class="matrix-tag">WHEN · Quando será feito?</span>
           <p style="margin: 6px 0 0 0; font-size: 0.88rem;">
-            Ciclo ágil de 4 semanas na Unidade Probatória 1 (UP1 - 2026.2), com repasse periódico do material coletado para ecopontos homologados (Green Eletron / cooperativa local).
+            Ciclo ágil de 4 semanas, com repasse periódico do material coletado para ecopontos homologados (Green Eletron / cooperativa local).
           </p>
         </div>
 
         <div class="matrix-card">
           <span class="matrix-tag">WHO · Por quem será feito?</span>
           <p style="margin: 6px 0 0 0; font-size: 0.88rem;">
-            Equipe multidisciplinar de <strong>17 discentes</strong> (13 de Ciência da Computação, 2 de Direito, 1 de Ciências Contábeis e 1 de Administração) sob orientação da Profa. Mayranne Rocha.
+            Equipe multidisciplinar de <strong>17 discentes</strong> (13 de Ciência da Computação, 2 de Direito, 1 de Ciências Contábeis e 1 de Administração).
           </p>
         </div>
 
@@ -1022,11 +1022,10 @@ function renderizarAbaInstitucional(): string {
       <section class="section-card" aria-labelledby="titulo-equipe">
         <span class="brand-eyebrow">Governança & Multidisciplinaridade</span>
         <h2 id="titulo-equipe" style="margin: 4px 0 12px 0; font-family: var(--font-display);">
-          Equipe Extensionista (17 Integrantes)
+          Equipe Multidisciplinar (17 Integrantes)
         </h2>
         <p style="margin: 0 0 12px 0; font-size: 0.84rem; color: var(--color-text-secondary);">
-          <strong>Instituição:</strong> ${escaparHtml(EQUIPE_PROJETO.instituicao)}<br/>
-          <strong>Preceptora/Orientadora:</strong> ${escaparHtml(EQUIPE_PROJETO.orientadora)} · <strong>Liderança:</strong> ${escaparHtml(EQUIPE_PROJETO.lideranca)}
+          <strong>Liderança:</strong> ${escaparHtml(EQUIPE_PROJETO.lideranca)} · <strong>Tema:</strong> ${escaparHtml(EQUIPE_PROJETO.tema)}
         </p>
 
         <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -1089,7 +1088,7 @@ function renderizarAbaInstitucional(): string {
 
       <div class="poster-preview">
         <div style="font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.08em; color: var(--color-brand-secondary); font-weight: 700;">
-          PROJETO DE EXTENSÃO UNIMA | AFYA · MACEIÓ-AL
+          PROJETO DESCARTE INTELIGENTE · MACEIÓ-AL
         </div>
         <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin: 6px 0; text-transform: uppercase;">
           DESCARTE INTELIGENTE DE E-LIXO
@@ -1216,10 +1215,10 @@ function inicializarOuAtualizarMapaLeaflet(): void {
 
   const latInicial = pevFoco
     ? pevFoco.latitude
-    : COORDENADAS_PADRAO_UNIMA.latitude;
+    : COORDENADAS_PADRAO_PILOTO.latitude;
   const lngInicial = pevFoco
     ? pevFoco.longitude
-    : COORDENADAS_PADRAO_UNIMA.longitude;
+    : COORDENADAS_PADRAO_PILOTO.longitude;
 
   if (!instanciaMapa) {
     instanciaMapa = L.map(container, {
@@ -1232,7 +1231,7 @@ function inicializarOuAtualizarMapaLeaflet(): void {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Descarte Inteligente UNIMA',
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Descarte Inteligente Maceió',
     }).addTo(instanciaMapa);
 
     camadaMarkers = L.layerGroup().addTo(instanciaMapa);
@@ -1466,10 +1465,10 @@ function vincularEventosDom(): void {
   if (btnGrandes) {
     btnGrandes.addEventListener('click', () => {
       estado.categoriaFiltro = 'computadores';
-      estado.pevSelecionadoId = 3; // Parque Shopping (a 850m da UNIMA)
+      estado.pevSelecionadoId = 3; // Parque Shopping (a 850m do ponto piloto)
       atualizarParcialAbaMapa(true);
       mostrarNotificacao(
-        'Filtro ajustado para Computadores/Médio Porte. Destacando PEV Parque Shopping (850m da UNIMA).'
+        'Filtro ajustado para Computadores/Médio Porte. Destacando PEV Parque Shopping (850m do ponto piloto).'
       );
     });
   }
@@ -1496,7 +1495,7 @@ function vincularEventosDom(): void {
     btnGps.addEventListener('click', () => {
       if (!('geolocation' in navigator)) {
         mostrarNotificacao(
-          'Seu navegador não suporta geolocalização. Mantendo referência no Campus UNIMA.'
+          'Seu navegador não suporta geolocalização. Mantendo referência no Ponto Piloto.'
         );
         return;
       }
@@ -1525,11 +1524,11 @@ function vincularEventosDom(): void {
         },
         () => {
           estado.coordenadasUsuario = {
-            latitude: COORDENADAS_PADRAO_UNIMA.latitude,
-            longitude: COORDENADAS_PADRAO_UNIMA.longitude,
-            rotulo: COORDENADAS_PADRAO_UNIMA.label,
+            latitude: COORDENADAS_PADRAO_PILOTO.latitude,
+            longitude: COORDENADAS_PADRAO_PILOTO.longitude,
+            rotulo: COORDENADAS_PADRAO_PILOTO.label,
           };
-          estado.statusGps = 'GPS negado · Usando UNIMA';
+          estado.statusGps = 'GPS negado · Usando Ponto Piloto';
           atualizarParcialAbaMapa(true);
         },
         { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }
@@ -1537,20 +1536,20 @@ function vincularEventosDom(): void {
     });
   }
 
-  // Simular referência UNIMA
+  // Simular referência Ponto Piloto
   const btnSimularUnima = document.getElementById('btn-simular-unima');
   if (btnSimularUnima) {
     btnSimularUnima.addEventListener('click', () => {
       estado.coordenadasUsuario = {
-        latitude: COORDENADAS_PADRAO_UNIMA.latitude,
-        longitude: COORDENADAS_PADRAO_UNIMA.longitude,
-        rotulo: COORDENADAS_PADRAO_UNIMA.label,
+        latitude: COORDENADAS_PADRAO_PILOTO.latitude,
+        longitude: COORDENADAS_PADRAO_PILOTO.longitude,
+        rotulo: COORDENADAS_PADRAO_PILOTO.label,
       };
-      estado.statusGps = 'Ref.: Campus UNIMA | Afya';
+      estado.statusGps = 'Ref.: Ponto Piloto (Cruz das Almas)';
       estado.pevSelecionadoId = 1;
       atualizarParcialAbaMapa(true);
       mostrarNotificacao(
-        'Coordenadas centralizadas na Entrada do Refeitório — Campus UNIMA | Afya.'
+        'Coordenadas centralizadas no Ponto Piloto — Cruz das Almas, Maceió.'
       );
     });
   }
@@ -1615,7 +1614,7 @@ function vincularEventosDom(): void {
         categoria: itemCalc.categoriaRecomendada,
         pevId: itemCalc.cabeNoColetorPiloto ? 1 : 3,
         pevNome: itemCalc.cabeNoColetorPiloto
-          ? 'Coletor Piloto — Campus UNIMA | Afya'
+          ? 'Coletor Piloto — Cruz das Almas'
           : 'PEV Green Eletron — Parque Shopping Maceió',
         pesoGramas: itemCalc.pesoMedioGramas,
         metaisGramas: itemCalc.metaisEvitadosGramas,
@@ -1802,8 +1801,8 @@ function renderizarApp(): void {
     <footer class="site-footer">
       <div class="footer-inner">
         <div>
-          <strong>PROJETO DESCARTE INTELIGENTE</strong> · Centro Universitário UNIMA | Afya (Maceió - AL)<br/>
-          Disciplina: Experiência Extensionista II · Preceptora: Profa. Mayranne Rocha
+          <strong>PROJETO DESCARTE INTELIGENTE</strong> · Logística Reversa de E-Lixo (Maceió - AL)<br/>
+          Iniciativa de Extensão Acadêmica · Mapeamento Colaborativo de PEVs
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.76rem;">
           Base Legal: PNRS (Lei 12.305/2010) · Decreto Federal 10.240/2020 · LGPD (Lei 13.709/2018)<br/>
