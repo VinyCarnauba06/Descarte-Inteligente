@@ -1,8 +1,0 @@
-node_modules
-dist
-Docs
-FONTES
-.git
-.env
-*.log
-
