@@ -129,7 +129,7 @@ const estado: EstadoApp = {
     longitude: COORDENADAS_PADRAO_PILOTO.longitude,
     rotulo: COORDENADAS_PADRAO_PILOTO.label,
   },
-  statusGps: 'Ref.: Ponto Piloto (Cruz das Almas)',
+  statusGps: 'Maceió (Centro)',
   pevSelecionadoId: sessaoSalva.pevSelecionadoId ?? 1,
   calloutColetorAtivo: 1,
   itemCalculadoraId: ITENS_CALCULADORA[0].id,
@@ -579,10 +579,7 @@ function renderizarAbaMapa(): string {
         <div class="gps-controls">
           <span id="gps-status-pill" class="gps-status-pill" aria-live="polite">${escaparHtml(estado.statusGps)}</span>
           <button type="button" class="btn btn-primary btn-sm" id="btn-usar-gps">
-            <span>Meu GPS</span>
-          </button>
-          <button type="button" class="btn btn-secondary btn-sm" id="btn-simular-unima">
-            <span>Ref.: Ponto Piloto</span>
+            <span>Usar Meu GPS</span>
           </button>
         </div>
       </div>
@@ -1528,28 +1525,10 @@ function vincularEventosDom(): void {
             longitude: COORDENADAS_PADRAO_PILOTO.longitude,
             rotulo: COORDENADAS_PADRAO_PILOTO.label,
           };
-          estado.statusGps = 'GPS negado · Usando Ponto Piloto';
+          estado.statusGps = 'GPS desativado';
           atualizarParcialAbaMapa(true);
         },
         { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }
-      );
-    });
-  }
-
-  // Simular referência Ponto Piloto
-  const btnSimularUnima = document.getElementById('btn-simular-unima');
-  if (btnSimularUnima) {
-    btnSimularUnima.addEventListener('click', () => {
-      estado.coordenadasUsuario = {
-        latitude: COORDENADAS_PADRAO_PILOTO.latitude,
-        longitude: COORDENADAS_PADRAO_PILOTO.longitude,
-        rotulo: COORDENADAS_PADRAO_PILOTO.label,
-      };
-      estado.statusGps = 'Ref.: Ponto Piloto (Cruz das Almas)';
-      estado.pevSelecionadoId = 1;
-      atualizarParcialAbaMapa(true);
-      mostrarNotificacao(
-        'Coordenadas centralizadas no Ponto Piloto — Cruz das Almas, Maceió.'
       );
     });
   }
