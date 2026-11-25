@@ -85,14 +85,9 @@ function exportarMatrizParaPng(textoUrl, caminhoSaida, escalaPx = 24) {
 }
 
 exportarMatrizParaPng(
-  'http://192.168.0.176:5173',
-  'Docs/qrcode-wifi-local-192.168.0.176.png',
-  24
+  'https://descarte-inteligente-chi.vercel.app',
+  'docs/qrcode-producao-descarte-inteligente.png',
+  32
 );
-exportarMatrizParaPng(
-  'https://descarte-inteligente-unima.vercel.app',
-  'Docs/qrcode-producao-descarte-inteligente.png',
-  24
-);
-console.log('Arquivos PNG de alta resolução gerados em Docs/');
+console.log('Arquivos PNG de alta resolução gerados em docs/');
 
